@@ -1,0 +1,38 @@
+@function random-hex(){
+    $variabile: '#';
+    @for $i from 1 through 3{
+       $randomnumber: random(15);
+        @if $randomnumber<=9 {
+            $variabile: $variabile + $randomnumber + $randomnumber;
+        }
+            @else if $randomnumber==10{
+                $randomnumber: A;
+                $variabile: $variabile + $randomnumber + $randomnumber;
+            }
+
+            @else if $randomnumber==11{
+                $randomnumber: B;
+                $variabile: $variabile + $randomnumber + $randomnumber;
+            }
+            
+            @else if $randomnumber==12{
+                $randomnumber: C;
+                $variabile: $variabile + $randomnumber + $randomnumber;
+            }
+            @else if $randomnumber==13{
+                $randomnumber: D;
+                $variabile: $variabile + $randomnumber + $randomnumber;
+            }
+            @else if $randomnumber==14{
+                $randomnumber: E;
+                $variabile: $variabile + $randomnumber + $randomnumber;
+            }
+            @else if $randomnumber==15{
+                $randomnumber: F;
+                $variabile: $variabile + $randomnumber + $randomnumber;
+            }
+        }
+
+    $variabile: unquote($string: $variabile);
+    @return $variabile;
+}

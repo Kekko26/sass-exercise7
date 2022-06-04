@@ -1,0 +1,22 @@
+
+@mixin bounce($partenza: 0s, $distanza:-30px, $durata: 1s){
+    animation: bounce $durata infinite $partenza;
+
+    @keyframes bounce{
+        0%{
+
+        }
+
+        40%{
+            transform: translateY($distanza);
+        }
+
+        60%{
+            transform: translateY(calc($distanza/2));
+        }
+
+        100%{
+
+        }
+    }
+}
